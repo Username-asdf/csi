@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.api.mapper.GsignMapper">
+  <resultMap id="BaseResultMap" type="com.api.pojo.Gsign">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="cgsid" jdbcType="INTEGER" property="cgsid" />
+    <result column="uid" jdbcType="INTEGER" property="uid" />
+    <result column="signTime" jdbcType="TIMESTAMP" property="signTime" />
+    <result column="finish" jdbcType="CHAR" property="finish" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, cgsid, uid, signTime, finish
+  </sql>
+  <select id="selectByExample" parameterType="com.api.pojo.GsignExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from gsign
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+    <if test="limit != null">
+      <if test="offset != null">
+        limit ${offset}, ${limit}
+      </if>
+      <if test="offset == null">
+        limit ${limit}
+      </if>
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from gsign
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from gsign
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.api.pojo.GsignExample">
+    delete from gsign
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.api.pojo.Gsign">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into gsign (cgsid, uid, signTime, 
+      finish)
+    values (#{cgsid,jdbcType=INTEGER}, #{uid,jdbcType=INTEGER}, #{signTime,jdbcType=TIMESTAMP}, 
+      #{finish,jdbcType=CHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.api.pojo.Gsign">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into gsign
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="cgsid != null">
+        cgsid,
+      </if>
+      <if test="uid != null">
+        uid,
+      </if>
+      <if test="signTime != null">
+        signTime,
+      </if>
+      <if test="finish != null">
+        finish,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="cgsid != null">
+        #{cgsid,jdbcType=INTEGER},
+      </if>
+      <if test="uid != null">
+        #{uid,jdbcType=INTEGER},
+      </if>
+      <if test="signTime != null">
+        #{signTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="finish != null">
+        #{finish,jdbcType=CHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.api.pojo.GsignExample" resultType="java.lang.Long">
+    select count(*) from gsign
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update gsign
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.cgsid != null">
+        cgsid = #{record.cgsid,jdbcType=INTEGER},
+      </if>
+      <if test="record.uid != null">
+        uid = #{record.uid,jdbcType=INTEGER},
+      </if>
+      <if test="record.signTime != null">
+        signTime = #{record.signTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.finish != null">
+        finish = #{record.finish,jdbcType=CHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update gsign
+    set id = #{record.id,jdbcType=INTEGER},
+      cgsid = #{record.cgsid,jdbcType=INTEGER},
+      uid = #{record.uid,jdbcType=INTEGER},
+      signTime = #{record.signTime,jdbcType=TIMESTAMP},
+      finish = #{record.finish,jdbcType=CHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.api.pojo.Gsign">
+    update gsign
+    <set>
+      <if test="cgsid != null">
+        cgsid = #{cgsid,jdbcType=INTEGER},
+      </if>
+      <if test="uid != null">
+        uid = #{uid,jdbcType=INTEGER},
+      </if>
+      <if test="signTime != null">
+        signTime = #{signTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="finish != null">
+        finish = #{finish,jdbcType=CHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.api.pojo.Gsign">
+    update gsign
+    set cgsid = #{cgsid,jdbcType=INTEGER},
+      uid = #{uid,jdbcType=INTEGER},
+      signTime = #{signTime,jdbcType=TIMESTAMP},
+      finish = #{finish,jdbcType=CHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
