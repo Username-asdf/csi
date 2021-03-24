@@ -1,0 +1,19 @@
+<!-- 1.位置签到 -->
+<view class="head">
+  <view class="map">
+    <map type="gcj02"
+    latitude="{{latitude}}"
+    longitude="{{longitude}}"
+    circles="{{circles}}"
+  scale="16"
+  show-location="true"
+  show-scale="true"
+>
+</map>
+  </view>
+</view>
+
+<!-- 2.确定 -->
+<view class="confirm">
+  <button type="primary" bindtap="lsign">确定</button>
+</view>

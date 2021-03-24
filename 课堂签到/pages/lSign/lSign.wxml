@@ -1,0 +1,33 @@
+<!-- 1.位置签到 -->
+<view class="head">
+  <view class="map">
+    <map type="gcj02"
+    latitude="{{latitude}}"
+    longitude="{{longitude}}"
+    circles="{{circles}}"
+  scale="16"
+  show-location="true"
+  show-scale="true"
+>
+</map>
+  </view>
+  <view class="range">
+    <text>签到范围:</text>
+    <input type="number" disabled="true" value="{{range}}"></input>
+    <view class="change">
+      <view bindtap="desc" class="d"><text>-</text></view>
+      <view bindtap="inc" class="i"><text>+</text></view>
+    </view>
+  </view>
+  <view class="time">
+  <view class="time-title">选择时间:</view>
+    <picker class="picker" mode="selector" bindchange="pickerChange" range="{{time}}" value="{{index}}">
+      <view>{{time[index]}}</view>
+    </picker>
+  </view>
+</view>
+
+<!-- 2.确定 -->
+<view class="confirm">
+  <button type="primary" bindtap="createPSign">确定</button>
+</view>

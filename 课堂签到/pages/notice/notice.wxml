@@ -1,0 +1,40 @@
+<!-- 1.普通签到 -->
+<view bindtap="toSign" class="head" wx:for="{{noticeData.sign}}" wx:key="index" data-id="0" data-signid="{{item.signid}}">
+    <view class="name">{{item.name}}</view>
+    <view class="num">普通签到</view>
+    <view class="more">
+      <image src="../../images/more.png"></image>
+    </view>
+</view>
+
+<!-- 2.密码签到 -->
+<view bindtap="toSign" class="head" wx:for="{{noticeData.psign}}" wx:key="index" data-id="1" data-signid="{{item.signid}}">
+    <view class="name">{{item.name}}</view>
+    <view class="num">密码签到</view>
+    <view class="more">
+      <image src="../../images/more.png"></image>
+    </view>
+</view>
+
+<!-- 3.手势签到 -->
+<view bindtap="toSign" class="head" wx:for="{{noticeData.gsign}}" wx:key="index" data-id="2" data-signid="{{item.signid}}">
+    <view class="name">{{item.name}}</view>
+    <view class="num">手势签到</view>
+    <view class="more">
+      <image src="../../images/more.png"></image>
+    </view>
+</view>
+
+<!-- 4.位置签到 -->
+<view bindtap="toSign" class="head" wx:for="{{noticeData.lsign}}" wx:key="index" data-id="3" data-signid="{{item.signid}}">
+    <view class="name">{{item.name}}</view>
+    <view class="num">位置签到</view>
+    <view class="more">
+      <image src="../../images/more.png"></image>
+    </view>
+</view>
+
+<!-- 5.没有消息，进行提示 -->
+<view wx:if="{{isShow}}" class="none">
+  <text>还没有消息</text>
+</view>

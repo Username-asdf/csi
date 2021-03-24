@@ -1,0 +1,24 @@
+<!-- 1.轮播图片 -->
+<swiper class="swiper" indicator-dots="true" autoplay="true" interval="3000" circular="true">
+    <swiper-item class="swiper-item">
+        <image src="../../images/view1.png"></image>
+    </swiper-item>
+    <swiper-item class="swiper-item">
+        <image src="../../images/view2.jpg"></image>
+    </swiper-item>
+    <swiper-item class="swiper-item">
+        <image src="../../images/view3.jpg"></image>
+    </swiper-item>
+</swiper>
+<!-- 2.功能 -->
+<view class="content">
+    <view class="one" bindtap="seelctClass" data-id="0"> <text class="text">发起签到</text> </view>
+    <view class="two" bindtap="seelctClass" data-id="1"><text class="text">随机点名</text></view>
+    <view class="three" bindtap="joinClass"><text class="text">加入班级</text></view>
+    <view class="four" bindtap="notice">
+        <text class="text">消息提醒</text>
+        <view class="num" wx:if="{{showNum}}">
+            <text>{{numVal}}</text>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,28 @@
+<!-- 1.选择签到类型 -->
+<view class="head" bindtap="selectSignType" data-id="0">
+    <view class="name">普通签到</view>
+    <view class="more">
+      <image src="../../images/more.png"></image>
+    </view>
+</view>
+
+<view class="head" bindtap="selectSignType" data-id="1">
+    <view class="name">密码签到</view>
+    <view class="more">
+      <image src="../../images/more.png"></image>
+    </view>
+</view>
+
+<view class="head" bindtap="selectSignType" data-id="2">
+    <view class="name">手势签到</view>
+    <view class="more">
+      <image src="../../images/more.png"></image>
+    </view>
+</view>
+
+<view class="head" bindtap="selectSignType" data-id="3">
+    <view class="name">位置签到</view>
+    <view class="more">
+      <image src="../../images/more.png"></image>
+    </view>
+</view>

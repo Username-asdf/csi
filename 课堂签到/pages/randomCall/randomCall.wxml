@@ -1,0 +1,14 @@
+<!-- 1.随机点名 -->
+
+<view class="head">
+  <view wx:if="{{isShow}}" class="stu">
+    <view class="nickName">昵称：{{stu.nickName}}</view>
+    <view wx:if="{{stu.sex=='1'}}" class="sex">性别：男</view>
+    <view wx:elif="{{stu.sex=='2'}}" class="sex">性别：女</view>
+    <view wx:else class="sex">性别：男</view>
+    <view class="phone">手机号：{{stu.phone?stu.phone:'未设置'}}</view>
+  </view>
+</view>
+ <view class="btn">
+    <button type="primary" bindtap="randomCall">随机点名</button>
+  </view>

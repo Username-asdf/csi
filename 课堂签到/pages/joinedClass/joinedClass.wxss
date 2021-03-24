@@ -1,0 +1,150 @@
+/* pages/createdClass/createdClass.wxss */
+/* 1.班级头 */
+page{
+  background: #f1f1f1;
+}
+
+.head{
+  width: 100%;
+  height: 80rpx;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  padding:30rpx 20rpx;
+  color: #666;
+  margin-bottom: 20rpx;
+  font-size: 26rpx;
+  position: relative;
+}
+
+.name{
+  width: 280rpx;
+  overflow: hidden;
+}
+
+.num{
+  margin-left: 20rpx;
+}
+
+.code text{
+  font-size: 28rpx;
+  font-weight: bold;
+  margin-left: 6rpx;
+}
+
+.xia,.shang{
+  padding: 20rpx 20rpx;
+  position: absolute;
+  right: 80rpx;
+}
+
+.xia image,.shang image{
+  width: 50rpx;
+  height: 50rpx;
+}
+
+/* 2.个人信息 */
+.content{
+  width: 90%;
+  margin-left: 10%;
+}
+
+.one{
+  background: #fff;
+  display: flex;
+  align-items: center;
+  color: #666;
+  padding: 10rpx 20rpx;
+  margin-bottom: 5rpx;
+}
+
+.nickName{
+  width: 500rpx;
+
+}
+
+.me{
+  margin-right: 60rpx;
+}
+
+/* 3.未加入班级 */
+.none{
+  width: 100%;
+  background: #fff;
+  padding: 20rpx 20rpx;
+  font-size: 34rpx;
+  color: #666;
+  display: flex;
+  align-items: center;
+  height: 80rpx;
+}
+
+.none text{
+  margin: 0 auto;
+}
+
+/* 4.退出 */
+.delMore{
+  position: absolute;
+  right: 50rpx;
+  z-index: 999;
+}
+
+.delMore image{
+  width:40rpx;
+  height: 40rpx;
+}
+
+.del{
+  width: 100rpx;
+  height: 60rpx;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.del text{
+  padding: 10rpx 20rpx;
+  border-radius: 5rpx;
+  color: #fff;
+  background: red;
+  position: absolute;
+  bottom: -20rpx;
+  right: 42rpx;
+}
+
+/* 5.修改班级昵称 */
+.upd,.confirm{
+  color: #58A1E7;
+  font-size: 24rpx;
+  position: absolute;
+  right:20rpx;
+  padding: 5rpx 10rpx;
+}
+
+.confirm{
+  display: flex;
+  align-items: center;
+}
+
+.y{
+  color:#fff;
+  border-radius: 10rpx;
+  background: #00B26A;
+  margin-right: 5rpx;
+  padding: 8rpx 10rpx;
+}
+
+.n{
+  color:#fff;
+  border-radius: 10rpx;
+  background: red;
+  padding: 8rpx 10rpx;
+}
+
+input{
+  border: solid 2rpx #eee;
+  padding-left: 10rpx;
+  border-radius: 10rpx;
+}

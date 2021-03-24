@@ -1,0 +1,41 @@
+<!-- 1.我的--引导用户进行登录 -->
+<view class="head" bindtap="aboutDetail">
+  <view class="img">
+    <open-data type="userAvatarUrl"></open-data>
+  </view>
+  <view wx:if="{{isLogin}}" class="name">
+    <open-data type="userNickName"></open-data>
+  </view>
+  <view wx:else class="name">
+    <button open-type="getUserInfo" bindgetuserinfo="getUserInfo">点击进行登录</button>
+  </view>
+  <view wx:if="{{isLogin}}" class="more">
+    <image src="../../images/more.png"></image>
+  </view>
+</view>
+
+<!-- 2.个人中心--功能 -->
+<view class="content" bindtap="joinedSign">
+  <view class="title">参加的签到</view>
+  <view class="select"><image src="../../images/more.png"></image></view>
+</view>
+
+<view class="content" bindtap="createedSign">
+  <view class="title">发起的签到</view>
+  <view class="select"><image src="../../images/more.png"></image></view>
+</view>
+
+<view class="content" bindtap="joinedClass">
+  <view class="title">加入的班级</view>
+  <view class="select"><image src="../../images/more.png"></image></view>
+</view>
+
+<view class="content" bindtap="createClass">
+  <view class="title">创建签到班级</view>
+  <view class="select"><image src="../../images/more.png"></image></view>
+</view>
+
+<view class="content" bindtap="createdClass">
+  <view class="title">创建的签到班级</view>
+  <view class="select"><image src="../../images/more.png"></image></view>
+</view>

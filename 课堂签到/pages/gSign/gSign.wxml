@@ -1,0 +1,20 @@
+<!-- 1.手势签到 -->
+<view class="head">
+  <view class="pwd">
+    <view class="reset" bindtap="reset">重新绘制</view>
+    <view class="container">
+      <canvas canvas-id="id-gesture-lock" class="gesture-lock" bindtouchstart="onTouchStart"
+        bindtouchmove="onTouchMove" bindtouchend="onTouchEnd"></canvas>
+    </view>
+  </view>
+  <view class="time">
+  <view class="time-title">选择时间:</view>
+    <picker class="picker" mode="selector" bindchange="pickerChange" range="{{time}}" value="{{index}}">
+      <view>{{time[index]}}</view>
+    </picker>
+  </view>
+</view>
+<!-- 2.确定 -->
+ <view class="confirm">
+    <button type="primary" bindtap="createPSign">确定</button>
+  </view>

@@ -1,0 +1,22 @@
+<!-- 1.密码签到 -->
+<view class="head">
+  <view class="pwd">
+    <view class="pwd-title">输入密码:</view>
+    <view class="input">
+      <input type="number" focus="{{one.focus}}" class="one" value="{{one.value}}" maxlength="1" data-id="0" bindinput="pwdInput"></input>
+      <input type="number" focus="{{two.focus}}" class="two" value="{{two.value}}" maxlength="1" data-id="1" bindinput="pwdInput"></input>
+      <input type="number" focus="{{three.focus}}" class="three" value="{{three.value}}" maxlength="1" data-id="2" bindinput="pwdInput"></input>
+      <input type="number" focus="{{four.focus}}" class="four" value="{{four.value}}" maxlength="1" data-id="3" bindinput="pwdInput"></input>
+    </view>
+  </view>
+  <view class="time">
+  <view class="time-title">选择时间:</view>
+    <picker class="picker" mode="selector" bindchange="pickerChange" range="{{time}}" value="{{index}}">
+      <view>{{time[index]}}</view>
+    </picker>
+  </view>
+</view>
+<!-- 2.确定 -->
+ <view class="confirm">
+    <button type="primary" bindtap="createPSign">确定</button>
+  </view>

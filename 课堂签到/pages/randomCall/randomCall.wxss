@@ -1,0 +1,28 @@
+/* pages/randomCall/randomCall.wxss */
+page{
+  background: #f1f1f1;
+}
+.head{
+  display: flex;
+  align-items: center;
+  background: #fff;
+}
+
+.stu{
+  margin: 0 auto;
+  margin-bottom: 60rpx;
+  margin-top: 200rpx;
+  padding: 20rpx 20rpx;
+  border: solid 3rpx #666;
+  border-radius: 10rpx;
+}
+
+.btn{
+  height: 200rpx;
+  display: flex;
+  align-items: center;
+  padding-top: 30rpx;
+}
+.btn button{
+  border-radius: 20rpx;
+}

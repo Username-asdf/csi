@@ -1,0 +1,11 @@
+<!-- 1.选择时间 -->
+<view class="time">
+  <view class="time-title">选择时间:</view>
+  <picker class="picker" mode="selector" bindchange="pickerChange" range="{{time}}" value="{{index}}">
+    <view>{{time[index]}}</view>
+  </picker>
+</view>
+
+  <view class="confirm">
+    <button type="primary" bindtap="createSign">确定</button>
+  </view>

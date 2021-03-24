@@ -1,0 +1,37 @@
+/* 1.选择签到类型 */
+page{
+  background: #f1f1f1;
+}
+
+.head{
+  width: 100%;
+  height: 80rpx;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  padding:30rpx 20rpx;
+  color: #666;
+  margin-bottom: 20rpx;
+  font-size: 26rpx;
+  position: relative;
+}
+
+.name{
+  width: 280rpx;
+  font-size: 38rpx;
+  margin-left: 60rpx;
+  overflow: hidden;
+}
+
+.more{
+  position: absolute;
+  right: 150rpx;
+  display: flex;
+  align-items: center;
+  color: #666;
+}
+
+.more image{
+  width: 40rpx;
+  height: 40rpx;
+}

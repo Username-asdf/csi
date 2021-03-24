@@ -1,0 +1,12 @@
+<!-- 1.选择班级 -->
+<view class="head" wx:for="{{classArr}}" wx:key="index" data-cid="{{item.id}}" bindtap="selectClass">
+    <view class="name">{{item.name}}</view>
+    <view class="num">{{item.num}}人</view>
+    <view class="more">
+      <image src="../../images/more.png"></image>
+    </view>
+</view>
+<!-- 2.没有班级 进行提示 -->
+<view wx:if="{{isShow}}" class="none">
+  <text>还未创建签到的班级</text>
+</view>

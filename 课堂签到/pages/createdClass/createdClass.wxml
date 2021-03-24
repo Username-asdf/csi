@@ -1,0 +1,46 @@
+
+<!-- 展示已班级的信息 -->
+
+<view wx:for="{{dataArr}}" wx:key="index">
+  <!-- 1.班级头部 -->
+  <view class="head">
+    <view class="name">{{item.class.name}}</view>
+    <view class="num">{{item.class.num}}人</view>
+    <view class="code">
+    邀请码:<text>{{item.class.code}}</text>
+    </view>
+    <view class="xia" wx:if="{{item.hidden}}" data-id="{{index}}" bindtap="showUser">
+      <image src="../../images/xia.png"></image>
+    </view>
+    <view class="shang" wx:else data-id="{{index}}" bindtap="hiddenUser">
+      <image src="../../images/shang.png"></image>
+    </view>
+    <!-- 删除 -->
+    <view class="delMore" data-id="{{index}}" bindtap="showDel">
+      <image src="../../images/a.png"></image>
+    </view>
+    <view class="del" hidden="{{item.delHidden}}" data-id="{{item.class.id}}" bindtap="delClass">
+      <text>删除</text>
+    </view>
+  </view>
+
+  <!-- 2.班级成员 -->
+  <view class="content" hidden="{{item.hidden}}">
+    <view class="one" wx:for="{{item.users}}" wx:key="index" 
+    wx:for-item="user" wx:for-index="userIndex">
+      <view class="nickName">{{user.nickName}}</view>
+      <view wx:if="{{user.sex==1}}" class="sex">男</view>
+      <view wx:elif="{{user.sex==2}}" class="sex">女</view>
+      <view wx:else class="sex">未设置</view>
+      <view wx:if="{{user.phone}}" class="phone">{{user.phone}}</view>
+      <view wx:else class="phone">未设置</view>
+      <!-- 删除班级成员 -->
+      <view class="delClassUser" data-userIndex="{{userIndex}}" data-id="{{index}}"
+      data-cid="{{item.class.id}}" data-uid="{{user.id}}" bindtap="delClassUser">删除</view>
+    </view>
+  </view>
+</view>
+
+<view wx:if="{{isShow}}" class="none">
+  <text>还未创建签到的班级</text>
+</view>

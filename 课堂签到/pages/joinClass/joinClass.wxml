@@ -1,0 +1,10 @@
+<!-- 1.加入班级 -->
+<view>
+  <view class="inputName">
+    <input type="text" bindinput="inputCode" placeholder="请输入班级邀请码" focus="true" maxlength="8"></input>
+  </view>
+
+  <view class="confirm">
+    <button type="primary" bindtap="joinClass">确定</button>
+  </view>
+</view>

@@ -1,0 +1,135 @@
+/* pages/createdClass/createdClass.wxss */
+/* 1.班级头 */
+page{
+  background: #f1f1f1;
+}
+
+.head{
+  width: 100%;
+  height: 80rpx;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  padding:30rpx 20rpx;
+  color: #666;
+  margin-bottom: 20rpx;
+  font-size: 26rpx;
+  position: relative;
+}
+
+.name{
+  width: 280rpx;
+  overflow: hidden;
+}
+
+.num{
+  margin-left: 20rpx;
+}
+
+.code{
+  margin-left: 20rpx;
+}
+
+.code text{
+  font-size: 28rpx;
+  font-weight: bold;
+  margin-left: 6rpx;
+}
+
+.xia,.shang{
+  padding: 20rpx 20rpx;
+  position: absolute;
+  right: 80rpx;
+}
+
+.xia image,.shang image{
+  width: 50rpx;
+  height: 50rpx;
+}
+
+/* 2.班级成员 */
+.content{
+  width: 90%;
+  margin-left: 10%;
+}
+
+.one{
+  background: #fff;
+  display: flex;
+  align-items: center;
+  color: #666;
+  padding: 10rpx 20rpx;
+  margin-bottom: 5rpx;
+  position: relative;
+}
+
+.nickName{
+  width: 260rpx;
+  overflow: hindden;
+}
+
+.sex{
+  margin-left: 20rpx;
+}
+
+.phone{
+  margin-left: 20rpx;
+}
+
+/* 删除班级成员 */
+.delClassUser{
+  position: absolute;
+  right: 10rpx;
+  padding: 6rpx 12rpx;
+  border-radius: 10rpx;
+  background: red;
+  font-size: 26rpx;
+  color: #fff;
+}
+
+/* 3.未创建班级 */
+.none{
+  width: 100%;
+  background: #fff;
+  padding: 20rpx 20rpx;
+  font-size: 34rpx;
+  color: #666;
+  display: flex;
+  align-items: center;
+  height: 80rpx;
+}
+
+.none text{
+  margin: 0 auto;
+}
+
+/* 4.删除 */
+.delMore{
+  position: absolute;
+  right: 50rpx;
+  z-index: 999;
+}
+
+.delMore image{
+  width:40rpx;
+  height: 40rpx;
+}
+
+.del{
+  width: 100rpx;
+  height: 60rpx;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.del text{
+  padding: 10rpx 20rpx;
+  border-radius: 5rpx;
+  color: #fff;
+  background: red;
+  position: absolute;
+  bottom: -20rpx;
+  right: 42rpx;
+}

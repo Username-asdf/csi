@@ -1,0 +1,131 @@
+/* pages/createdSign/createdSign.wxss */
+/* 1.签到头 */
+page{
+  background: #f1f1f1;
+}
+
+.head{
+  width: 100%;
+  height: 80rpx;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  padding:30rpx 20rpx;
+  color: #666;
+  margin-bottom: 20rpx;
+  font-size: 26rpx;
+  position: relative;
+}
+
+.name{
+  width: 280rpx;
+  overflow: hidden;
+}
+
+.create-time{
+  margin-left: 20rpx;
+}
+
+.xia,.shang{
+  padding: 20rpx 20rpx;
+  position: absolute;
+  right: 60rpx;
+}
+
+.xia image,.shang image{
+  width: 50rpx;
+  height: 50rpx;
+}
+
+/* 2.班级成员 */
+.content{
+  width: 90%;
+  margin-left: 10%;
+}
+
+.one{
+  background: #fff;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  color: #666;
+  padding: 10rpx 20rpx;
+  margin-bottom: 5rpx;
+  position: relative;
+}
+
+.nickName{
+  width: 260rpx;
+  overflow: hindden;
+}
+
+.result{
+  margin-left: 20rpx;
+}
+
+.location{
+  width: 300px;
+  padding-left: 10rpx;
+  padding-top: 10rpx;
+  padding-bottom: 5rpx;
+  font-size: 20rpx;
+}
+
+.detail image{
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.detail{
+  position: absolute;
+  right: 40rpx;
+  top: 10rpx;
+}
+
+/* 3.未创建签到 */
+.none{
+  width: 100%;
+  background: #fff;
+  padding: 20rpx 20rpx;
+  font-size: 34rpx;
+  color: #666;
+  display: flex;
+  align-items: center;
+  height: 80rpx;
+}
+
+.none text{
+  margin: 0 auto;
+}
+/* 4.签到头 */
+.sign-head{
+  background: #fff;
+  width: 100%;
+  min-height: 100rpx;
+  font-size: 30rpx;
+  color: #666;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 40rpx;
+}
+
+.sign-image image{
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.sign-title{
+  margin: 0 auto;
+}
+
+.sign-image{
+  position: absolute;
+  right: 40rpx;
+}
+
+.sign-num{
+  font-size: 24rpx;
+  position: absolute;
+  right: 140rpx;
+}

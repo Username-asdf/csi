@@ -1,0 +1,55 @@
+/* pages/selectClass/selectClass.wxss */
+/* 1.创建班级 */
+page{
+  background: #f1f1f1;
+}
+
+.head{
+  width: 100%;
+  height: 80rpx;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  padding:30rpx 20rpx;
+  color: #666;
+  margin-bottom: 20rpx;
+  font-size: 26rpx;
+  position: relative;
+}
+
+.name{
+  width: 280rpx;
+  overflow: hidden;
+}
+
+.num{
+  margin-left: 20rpx;
+}
+
+.more{
+  position: absolute;
+  right: 150rpx;
+  display: flex;
+  align-items: center;
+  color: #666;
+}
+
+.more image{
+  width: 40rpx;
+  height: 40rpx;
+}
+/* 2.未创建班级 */
+.none{
+  width: 100%;
+  background: #fff;
+  padding: 20rpx 20rpx;
+  font-size: 34rpx;
+  color: #666;
+  display: flex;
+  align-items: center;
+  height: 80rpx;
+}
+
+.none text{
+  margin: 0 auto;
+}

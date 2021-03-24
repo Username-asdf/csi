@@ -1,0 +1,76 @@
+/* pages/about/about.wxss */
+/* 1.我的 */
+page{
+  background: #f1f1f1;
+}
+
+.head{
+  display: flex;
+  padding: 20rpx 20rpx;
+  background: #fff;
+  align-items: center;
+  margin-bottom: 100rpx;
+}
+
+.img{
+  overflow: hidden;
+  border: solid 1rpx #eee;
+  border-radius: 50%;
+  margin-right: 30rpx;
+  margin-left: 50rpx;
+  width:120rpx;
+  height: 120rpx;
+}
+
+.img open-data{
+  width:120rpx;
+  height: 120rpx;
+}
+
+.name {
+  color: #666;
+  margin-right: 20rpx;
+}
+
+.name button{
+  background: #fff;
+  color: #666;
+}
+
+.more{
+  position: absolute;
+  right: 150rpx;
+  display: flex;
+  align-items: center;
+  color: #666;
+}
+
+.more image{
+  width: 40rpx;
+  height: 40rpx;
+}
+
+/* 2.功能 */
+.content{
+  background: #fff;
+  display: flex;
+  align-items: center;
+  padding: 40rpx 20rpx;
+  margin-bottom: 40rpx;
+}
+
+.title{
+  color: #666;
+  padding-left: 50rpx;
+}
+
+.select{
+  position: absolute;
+  right: 160rpx;
+  color: #666;
+}
+
+.select image{
+  width: 40rpx;
+  height: 40rpx;
+}

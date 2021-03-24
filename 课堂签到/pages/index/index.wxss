@@ -1,0 +1,83 @@
+/* 1.功能 */
+page{
+  background: #f1f1f1;
+}
+
+.content{
+  background: #fff;
+  width: 100%;
+  height: 750rpx;
+  border: solid 1rpx #fff;
+  position: relative;
+  margin-top: -100rpx;
+}
+
+.one,.two,.three,.four{
+  width: 200rpx;
+  height: 200rpx;
+  position: absolute;
+  background: #eee;
+  display: flex;
+  align-items: center;
+  border: solid 1rpx #fff;
+  border-radius: 50%;
+}
+
+.text{
+  margin: 0 auto;
+}
+
+.one{
+  left: 165rpx;
+  top:165rpx;
+  background: #EF1F1F;
+}
+
+.two{
+  right: 165rpx;
+  top:165rpx;
+  background: #40E728;
+}
+
+.three{
+  left: 165rpx;
+  bottom: 165rpx;
+  background: #F2EE21;
+}
+
+.four{
+  right: 165rpx;
+  bottom: 165rpx;
+  background: #568BD0;
+}
+
+.num{
+  width: 40rpx;
+  height: 40rpx;
+  font-size: 20rpx;
+  position: absolute;
+  right: 10rpx;
+  top: 10rpx;
+  border-radius: 50%;
+  background: red;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.num text{
+  margin: 0 auto;
+}
+
+/* 2.轮播图 */
+.swiper{
+  position: relative;
+  width: 100%;
+  height: 400rpx;
+  z-index: 99;
+}
+
+.swiper-item image{
+  width: 100%;
+  height: 400rpx;
+}

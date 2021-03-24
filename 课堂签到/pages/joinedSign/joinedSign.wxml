@@ -1,0 +1,163 @@
+<!--pages/createdSign/createdSign.wxml-->
+
+<!-- 展示已发起的签到信息 -->
+<!-- 1.签到头 -->
+<view wx:if="{{!isShow}}" class="sign-head">
+  <view class="sign-title">
+  <text>普通签到</text> 
+  </view>
+  <view class="sign-num">{{signData.length}}条</view>
+  <view class="sign-image" data-id="0" bindtap="showSign">
+    <image wx:if="{{signHidden}}" src="../../images/xia.png"></image>
+    <image wx:else src="../../images/shang.png"></image>
+  </view>
+</view>
+<!-- 普通签到 -->
+<view hidden="{{signHidden}}" wx:for="{{signData}}" wx:key="index">
+  <!-- 1.签到 -->
+  <view class="head">
+    <view class="name">{{item.name}}</view>
+    <view class="sign-type">普通签到</view>
+    <view class="create-time">{{item.createTime}}</view>
+    <view class="xia" wx:if="{{item.hidden}}" data-id="{{index}}" bindtap="showSignUser">
+      <image src="../../images/xia.png"></image>
+    </view>
+    <view class="shang" wx:else data-id="{{index}}" bindtap="hiddenSignUser">
+      <image src="../../images/shang.png"></image>
+    </view>
+  </view>
+
+  <!-- 2.班级成员 -->
+  <view class="content" hidden="{{item.hidden}}">
+    <view class="one">
+      <view class="nickName">我</view>
+      <view class="result">状态：{{item.user.result}}</view>
+      <view class="location" wx:if="{{item.user.result!=='未签到'}}">
+        签到时间：{{item.user.signTime}}
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 1.签到头 -->
+<view wx:if="{{!isShow}}" class="sign-head">
+  <view class="sign-title">
+  <text>密码签到</text> 
+  </view>
+  <view class="sign-num">{{psignData.length}}条</view>
+  <view class="sign-image" data-id="1" bindtap="showSign">
+    <image wx:if="{{psignHidden}}" src="../../images/xia.png"></image>
+    <image wx:else src="../../images/shang.png"></image>
+  </view>
+</view>
+<!-- 密码签到 -->
+<view hidden="{{psignHidden}}" wx:for="{{psignData}}" wx:key="index">
+  <!-- 1.签到 -->
+  <view class="head">
+    <view class="name">{{item.name}}</view>
+    <view class="sign-type">密码签到</view>
+    <view class="create-time">{{item.createTime}}</view>
+    <view class="xia" wx:if="{{item.hidden}}" data-id="{{index}}" bindtap="showPSignUser">
+      <image src="../../images/xia.png"></image>
+    </view>
+    <view class="shang" wx:else data-id="{{index}}" bindtap="hiddenPSignUser">
+      <image src="../../images/shang.png"></image>
+    </view>
+  </view>
+
+  <!-- 2.班级成员 -->
+  <view class="content" hidden="{{item.hidden}}">
+    <view class="one">
+      <view class="nickName">我</view>
+      <view class="result">状态：{{item.user.result}}</view>
+      <view class="location" wx:if="{{item.user.result!=='未签到'}}">
+        签到时间：{{item.user.signTime}}
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 1.签到头 -->
+<view wx:if="{{!isShow}}" class="sign-head">
+  <view class="sign-title">
+  <text>手势签到</text> 
+  </view>
+  <view class="sign-num">{{gsignData.length}}条</view>
+  <view class="sign-image" data-id="2" bindtap="showSign">
+    <image wx:if="{{gsignHidden}}" src="../../images/xia.png"></image>
+    <image wx:else src="../../images/shang.png"></image>
+  </view>
+</view>
+<!-- 手势签到 -->
+<view hidden="{{gsignHidden}}" wx:for="{{gsignData}}" wx:key="index">
+  <!-- 1.签到 -->
+  <view class="head">
+    <view class="name">{{item.name}}</view>
+    <view class="sign-type">手势签到</view>
+    <view class="create-time">{{item.createTime}}</view>
+    <view class="xia" wx:if="{{item.hidden}}" data-id="{{index}}" bindtap="showGSignUser">
+      <image src="../../images/xia.png"></image>
+    </view>
+    <view class="shang" wx:else data-id="{{index}}" bindtap="hiddenGSignUser">
+      <image src="../../images/shang.png"></image>
+    </view>
+  </view>
+
+  <!-- 2.班级成员 -->
+  <view class="content" hidden="{{item.hidden}}">
+    <view class="one">
+      <view class="nickName">我</view>
+      <view class="result">状态：{{item.user.result}}</view>
+      <view class="location" wx:if="{{item.user.result!=='未签到'}}">
+        签到时间：{{item.user.signTime}}
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 1.签到头 -->
+<view wx:if="{{!isShow}}" class="sign-head">
+  <view class="sign-title">
+  <text>位置签到</text> 
+  </view>
+  <view class="sign-num">{{lsignData.length}}条</view>
+  <view class="sign-image" data-id="3" bindtap="showSign">
+    <image wx:if="{{lsignHidden}}" src="../../images/xia.png"></image>
+    <image wx:else src="../../images/shang.png"></image>
+  </view>
+</view>
+<!-- 位置签到 -->
+<view hidden="{{lsignHidden}}" wx:for="{{lsignData}}" wx:key="index">
+  <!-- 1.签到 -->
+  <view class="head">
+    <view class="name">{{item.name}}</view>
+    <view class="sign-type">位置签到</view>
+    <view class="create-time">{{item.createTime}}</view>
+    <view class="xia" wx:if="{{item.hidden}}" data-id="{{index}}" bindtap="showLSignUser">
+      <image src="../../images/xia.png"></image>
+    </view>
+    <view class="shang" wx:else data-id="{{index}}" bindtap="hiddenLSignUser">
+      <image src="../../images/shang.png"></image>
+    </view>
+  </view>
+
+  <!-- 2.班级成员 -->
+  <view class="content" hidden="{{item.hidden}}">
+    <view class="one">
+      <view class="nickName">我</view>
+      <view class="result">状态：{{item.user.result}}</view>
+      <view data-id="{{index}}" bindtap="getLocation" wx:if="{{item.user.result!=='未签到'}}" class="detail">
+        <image src="../../images/a.png"></image>
+      </view>
+      <view  wx:if="{{item.user.result!=='未签到'}}" wx:if="{{item.user.showLocation}}" class="location">
+        签到时间：{{item.user.signTime}}
+      </view>
+      <view wx:if="{{item.user.showLocation}}" class="location">
+        签到地点：{{item.user.location}}
+      </view>
+    </view>
+  </view>
+</view>
+<view wx:if="{{isShow}}" class="none">
+  <text>还未创建签到</text>
+</view>

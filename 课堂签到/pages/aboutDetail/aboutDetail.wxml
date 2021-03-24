@@ -1,0 +1,38 @@
+<!-- 1.查看修改个人信息 -->
+<view class="comm">
+  <view class="left">昵称：</view>
+  <view class="right">
+    <open-data type="userNickName"></open-data>
+  </view>
+</view>
+
+<view class="comm">
+  <view class="left">性别：</view>
+  <view class="right">
+    <input type="text" focus="true" bindinput="sexInput" wx:if="{{showSex.showInput}}" value="{{sex}}"></input>
+    <text wx:else >{{sex}}</text>
+  </view>
+  <view class="upd" wx:if="{{showSex.showUpd}}" bindtap="updSex">修改</view>
+  <view class="confirm" wx:else>
+    <view class="y" bindtap="sexConfirm">确定</view>
+    <view class="n" bindtap="sexBlur">取消</view>
+  </view>
+</view>
+
+<view class="comm">
+  <view class="left">手机号：</view>
+  <view class="right">
+    <input type="number" focus="true" value="{{phone}}" bindinput="phoneInput" wx:if="{{showPhone.showInput}}"></input>
+    <text wx:else >{{phone=='0'?'未设置':phone}}</text>
+  </view>
+  <view class="upd" wx:if="{{showPhone.showUpd}}" bindtap="updPhone">修改</view>
+  <view class="confirm" wx:else>
+    <view class="y" bindtap="phoneConfirm">确定</view>
+    <view class="n" bindtap="phoneBlur">取消</view>
+  </view>
+</view>
+
+<!-- 2.退出登录 -->
+<view class="exit">
+  <button bindtap="exit">退出登录</button>
+</view>

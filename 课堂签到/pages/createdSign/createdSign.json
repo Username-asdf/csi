@@ -1,0 +1,8 @@
+{
+  "usingComponents": {},
+  "enablePullDownRefresh":true,
+  "backgroundColorBottom":"#f1f1f1",
+  "backgroundTextStyle":"dark",
+  "backgroundColor":"#f1f1f1",
+  "navigationBarTitleText": "发起的签到"
+}

@@ -1,0 +1,22 @@
+<!-- 1.创建班级 -->
+<view wx:if="{{isShow}}">
+<view class="inputName">
+  <input type="text" bindinput="inputName" placeholder="请输入班级名称(0 ~ 30字)" focus="true" maxlength="30"></input>
+</view>
+
+<view class="confirm">
+  <button type="primary" bindtap="createClass">确定</button>
+</view>
+</view>
+<!-- 2.班级邀请码 -->
+<view wx:else>
+<view class="num">
+  <view class="title">班级邀请码:</view>
+  <view class="ma">
+    <text>{{code}}</text>
+  </view>
+</view>
+<view class="confirm">
+  <button type="primary" bindtap="exit">确定</button>
+</view>
+</view>

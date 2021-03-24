@@ -1,0 +1,57 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/about/about",
+    "pages/aboutDetail/aboutDetail",
+    "pages/crateClass/createClass",
+    "pages/createdClass/createdClass",
+    "pages/joinClass/joinClass",
+    "pages/joinedClass/joinedClass",
+    "pages/selectClass/selectClass",
+    "pages/selectSignType/selectSignType",
+    "pages/pSign/pSign",
+    "pages/gSign/gSign",
+    "pages/lSign/lSign",
+    "pages/sign/sign",
+    "pages/test/index",
+    "pages/randomCall/randomCall",
+    "pages/notice/notice",
+    "pages/toSign/sign/sign",
+    "pages/toSign/psign/psign",
+    "pages/toSign/gsign/gsign",
+    "pages/toSign/lsign/lsign",
+    "pages/createdSign/createdSign",
+    "pages/joinedSign/joinedSign"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#58A1E7",
+    "navigationBarTitleText": "课堂签到",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/icon3.png",
+        "selectedIconPath": "images/icon4.png"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "text": "我的",
+        "iconPath": "images/icon1.png",
+        "selectedIconPath": "images/icon2.png"
+      }
+    ],
+    "selectedColor": "#58A1E7",
+    "color": "#aaa"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "位置信息将用于小程序"
+    }
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

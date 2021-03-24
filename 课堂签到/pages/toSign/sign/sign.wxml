@@ -1,0 +1,13 @@
+<!-- 1.普通签到 -->
+<view class="head">
+  <view wx:if="{{showSuccess}}" class="block">
+    <view class="y">签到成功</view>
+    <view class="signTime">
+      <text>签到时间：</text>
+      <text>{{signTime}}</text>
+    </view>
+  </view>
+  <view class="block" wx:else>
+    <view class="n">签到失败</view>
+  </view>
+</view>

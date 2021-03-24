@@ -1,0 +1,36 @@
+/* pages/joinClass/joinClass.wxss */
+/* 1.加入班级 */
+page{
+  background: #f1f1f1;
+}
+
+.inputName{
+  background: #fff;
+  padding: 20rpx 20rpx;
+  width: 100%;
+  min-height: 400rpx;
+  margin-bottom: 50rpx;
+  display: flex;
+  align-items: center;
+}
+
+.inputName input{
+  border: solid 2rpx #aaa;
+  padding-left: 20rpx;
+  width:80%;
+  height: 80rpx;
+  margin:0 auto;
+  color: #666;
+  font-size: 32rpx;
+  border-radius: 10rpx;
+}
+
+.confirm{
+  width: 100%;
+  min-height: 100rpx;
+}
+
+.confirm button{
+  margin: 0 auto;
+  border-radius: 20rpx;
+}

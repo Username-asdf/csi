@@ -1,0 +1,75 @@
+/* pages/toSign/psign/psign.wxss */
+page{
+  background: #f1f1f1;
+}
+.head{
+  background: #fff;
+  color: #666;
+}
+
+.pwd{
+  display: flex;
+  align-items: center;
+  min-height: 400rpx;
+  margin-bottom: 30rpx;
+}
+
+.pwd-title{
+  margin-left: 60rpx;
+}
+
+.input{
+  border: solid 3rpx #666;
+  margin-left: 20rpx;
+  display: flex;
+}
+
+.input input{
+  height: 80rpx;
+  width: 50rpx;
+  font-size: 40rpx;
+  padding-left: 30rpx;
+}
+.one,.two,.three{
+  border-right: solid 3rpx #666;
+}
+
+.time{
+  background: #fff;
+  padding: 20rpx 20rpx;
+  width: 100%;
+  min-height: 200rpx;
+  margin-bottom: 50rpx;
+  display: flex;
+  align-items: center;
+  color: #666;
+}
+
+.time-title{
+  margin-left: 40rpx;
+}
+
+.picker{
+  width: 60%;
+  height: 80rpx;
+  background: #f1f1f1;
+  display: flex;
+  align-items: center;
+  margin-left: 20rpx;
+  border-radius: 10rpx;
+}
+
+.picker view{
+  margin-left: 40rpx;
+}
+
+/* 2.确定 */
+.confirm{
+  width: 100%;
+  min-height: 100rpx;
+}
+
+.confirm button{
+  margin: 0 auto;
+  border-radius: 20rpx;
+}

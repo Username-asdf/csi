@@ -1,0 +1,75 @@
+/* pages/aboutDetail/aboutDetail.wxss */
+page{
+  background: #f1f1f1;
+}
+
+.comm{
+  background: #fff;
+  padding: 20rpx 20rpx;
+  margin-bottom: 30rpx;
+  display: flex;
+  align-items: center;
+  min-height: 60rpx;
+}
+
+.left{
+  color: #666;
+  width: 140rpx;
+  text-align: right;
+}
+
+.right{
+  color: #666;
+  margin-left: 20rpx;
+}
+
+.upd,.confirm{
+  color: #58A1E7;
+  font-size: 24rpx;
+  position: absolute;
+  right:20rpx;
+  padding: 5rpx 10rpx;
+}
+
+.confirm{
+  display: flex;
+  align-items: center;
+  
+}
+
+.y{
+  color:#fff;
+  border-radius: 10rpx;
+  background: #00B26A;
+  margin-right: 5rpx;
+  padding: 8rpx 10rpx;
+}
+
+.n{
+  color:#fff;
+  border-radius: 10rpx;
+  background: red;
+  padding: 8rpx 10rpx;
+}
+
+input{
+  border: solid 2rpx #eee;
+  padding-left: 10rpx;
+  border-radius: 10rpx;
+}
+/* 2.退出登录 */
+
+.exit{
+  min-height: 100rpx;
+  display: flex;
+  align-items: center;
+  margin-top: 60rpx;
+}
+
+.exit button{
+  background: #FA1515;
+  font-size: 32rpx;
+  border-radius: 20rpx;
+  padding: 10rpx 15rpx;
+  margin: 0 auto;
+}

@@ -1,0 +1,42 @@
+
+<!-- 展示已加入班级的信息 -->
+
+<view wx:for="{{dataArr}}" wx:key="index">
+  <!-- 1.班级头部 -->
+  <view class="head">
+    <view class="name">{{item.class.name}}</view>
+    <view class="num">{{item.class.num}}人</view>
+    <view class="xia" wx:if="{{item.hidden}}" data-id="{{index}}" bindtap="showUser">
+      <image src="../../images/xia.png"></image>
+    </view>
+    <view class="shang" wx:else data-id="{{index}}" bindtap="hiddenUser">
+      <image src="../../images/shang.png"></image>
+    </view>
+    <!-- 退出班级 -->
+    <view class="delMore" data-id="{{index}}" bindtap="showDel">
+      <image src="../../images/a.png"></image>
+    </view>
+    <view class="del" hidden="{{item.delHidden}}" data-cid="{{item.class.id}}" bindtap="delClass">
+      <text>退出</text>
+    </view>
+  </view>
+
+  <!-- 2.显示个人信息 -->
+  <view class="content" hidden="{{item.hidden}}">
+    <view class="one">
+      <view class="me">我</view>
+        <view class="nickName"  wx:if="{{item.showUpd}}">班级昵称：
+        {{item.user.nickName?item.user.nickName:'未设置'}}</view>
+        <input  wx:else type="text" data-id="{{index}}" focus="true" bindinput="nickNameInput"></input>
+        <view class="upd" wx:if="{{item.showUpd}}" data-id="{{index}}" bindtap="showUpd">修改</view>
+        <view class="confirm" wx:else>
+          <view class="y" data-id="{{index}}" data-cid="{{item.class.id}}" bindtap="updConfirm">确定</view>
+          <view class="n" data-id="{{index}}" bindtap="updCancle">取消</view>
+        </view>
+    </view>
+  </view>
+</view>
+
+<view wx:if="{{isShow}}" class="none">
+  <text>还未加入班级</text>
+</view>
